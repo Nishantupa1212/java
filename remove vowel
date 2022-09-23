@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class remove_vows {
+    public static void main(String[] Args){
+        Scanner sc = new Scanner(System.in);
+
+        String inp;
+        System.out.println("Enter a Sentence : ");
+        inp = sc.nextLine();
+
+        System.out.println("OUTPUT : ");
+        for(int i = 0;i<inp.length();i++){
+            if((inp.charAt(i) == 'a' )||(inp.charAt(i) == 'e' )||(inp.charAt(i) == 'i' )||(inp.charAt(i) == 'o' )||(inp.charAt(i) == 'u' ) ||
+            (inp.charAt(i) == 'A' )||(inp.charAt(i) == 'E' )||(inp.charAt(i) == 'I' )||(inp.charAt(i) == 'O' )||(inp.charAt(i) == 'U' ) ){
+                System.out.print(" ");
+            }
+            else
+                System.out.print(inp.charAt(i));
+        }
+    }
+}
