@@ -1,0 +1,32 @@
+import java.util.*;
+class reverse_order {
+    public static void main(String[] Args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a Word : ");
+        String inp = sc.nextLine();
+
+        char letter[] = new char[inp.length()];
+		char temp;
+		
+        for(int i = 0;i<inp.length();i++){
+            letter[i] = inp.charAt(i);
+        }
+		
+		for(int i = 0;i<inp.length();i++){
+			for(int j = i+1;j<inp.length();j++){
+				if(Character.toString(letter[i]).compareTo(Character.toString(letter[j]))< 0){
+					temp = letter[i];
+					letter[i] = letter[j];
+					letter[j] = temp;
+				}
+			}
+		}
+        System.out.println("OUTPUT : ");
+        for(int i = 0;i<inp.length();i++){
+            System.out.print(letter[i] + "  ");
+        }
+
+
+    }
+}
