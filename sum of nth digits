@@ -1,0 +1,35 @@
+import java.util.*;
+ class sum_of_n{
+	
+	public static int countDigits(int x){
+		int count = 0;
+		while(x > 0){
+			x = x/10;
+			count = count + 1;
+		}
+		return count;
+	}
+	public static void main(String[] Args){
+		Scanner sc = new Scanner(System.in);
+		
+		int n,num;
+		System.out.println("Enter N :");
+		n = sc.nextInt();
+		
+		System.out.println("Enter " + n + " Digit Number : ");
+		num = sc.nextInt();
+		
+		if(countDigits(num) == n){
+			int sum = 0;
+			while(num > 0){
+				sum = (num%10) + sum;
+				num = num/10;
+			}
+			System.out.println("Sum Of Digits : " + sum);
+		}
+		else{
+			System.out.println("Enter a " + n + " digit Number. \n");
+		}
+		
+	}
+}
