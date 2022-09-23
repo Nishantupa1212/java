@@ -1,0 +1,42 @@
+import java.util.*;
+ class square_root{
+	public static void main(String[] Args){
+		Scanner sc = new Scanner(System.in);
+		
+		int num,found = 0;
+		System.out.println("Enter a Number : ");
+		num = sc.nextInt();
+		
+		
+		System.out.println("Square Roots : \n");
+		if(num >= 0){
+			for(int i = 1;i<=150;i++){
+				if(i*i == num){
+					System.out.println(i + ", -" + i);
+					found = 1;
+					break;
+				}
+				else{
+					found = 0;
+				}
+			}
+		}
+		else if (num < 0){
+			num*=-1;
+			for(int i = 1;i<=150;i++){
+				if(i*i == num){
+					System.out.println(i + "i, -" + i + "i");
+					found = 1;
+					break;
+				}
+				else {
+					found = 0;
+				}
+			}
+		}
+		
+		if(found == 0){
+			System.out.println("Perfect Squares Doesnt Exist. ");
+		}
+	}
+}
