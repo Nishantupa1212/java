@@ -1,0 +1,20 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String args[]) {
+        String arr[]={"Madras","Delhi","Ahameabad","Calcutta","Bombay"};
+        int len=arr.length;
+        for(int i=0;i<len;i++)
+        {
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i].compareTo(arr[j])>0)
+                {
+                    String temp=arr[i];
+                    arr[i]=arr[j];
+                    arr[j]=temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
